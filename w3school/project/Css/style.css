@@ -1,0 +1,22 @@
+.col {
+	-webkit-moz-column-count: 3;
+	-moz-moz-column-count: 3;
+	-ms-moz-column-count: 3;
+	-o-moz-column-count: 3;
+	moz-column-count: 3;
+	-webkit-moz-column-width: 14em;
+	-moz-moz-column-width: 14em;
+	-ms-moz-column-width: 14em;
+	-o-moz-column-width: 14em;
+	moz-column-width: 14em;
+	-webkit-webkit-column-gap: 2em;
+	-moz-webkit-column-gap: 2em;
+	-ms-webkit-column-gap: 2em;
+	-o-webkit-column-gap: 2em;
+	webkit-column-gap: 2em;
+	-webkit-moz-column-rule: 1px solid #ccc;
+	-moz-moz-column-rule: 1px solid #ccc;
+	-ms-moz-column-rule: 1px solid #ccc;
+	-o-moz-column-rule: 1px solid #ccc;
+	moz-column-rule: 1px solid #ccc;
+}

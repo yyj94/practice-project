@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Template</title>
+  <script src="scripts/jquery-3.2.1.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      word-break: break-all;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 1em;
+    }
+    body {
+      color: #000;
+      font: 12px/1.5em Helvetica, Arial, sans-serif;
+      background: #fff;
+    }
+    a {
+      color: #31b0d5;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #E31E1C;
+      text-decoration: underline;
+    }
+    ul li {
+      list-style: none;
+    }
+    fieldset, img {
+      border: none;
+    }
+    .clearfix {
+      clear: both;
+    }
+    em {
+      color: #90959A;
+    }
+    .clear:after {
+      content: ".";
+      height: 0;
+      visibility: hidden;
+      diplay: block;
+      clear: both;
+    }
+    .v_show {
+      margin: 10px auto;
+      width: 592px;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .v_caption {
+      /*height: 40px;
+      background: #c7254e;
+      line-height: 40px;*/
+      /*overflow: hidden;*/
+      height: 35px;
+      background: url(img/btn_cartoon.gif) no-repeat 0 0;
+    }
+    .v_caption h2 {
+      float: left;
+      width: 84px;
+      height: 35px;
+      background: url(img/btn_cartoon.gif) no-repeat;
+      text-indent: -9999px;
+    }
+    .v_caption .cartoon {
+      background-position: 0 -100px;
+    }
+    .highlight_tip {
+      display: inline;
+      float: left;
+      margin: 14px 0 0 10px;
+    }
+    .highlight_tip span {
+      display: inline;
+      float: left;
+      width: 7px;
+      height: 7px;
+      margin: 0 2px;
+      background: url(img/btn_cartoon.gif) no-repeat 0 -320px;
+      text-indent: -9999px;
+    }
+    .highlight_tip .current {
+      background-position: 0 -220px;
+    }
+    .change_btn {
+      float: left;
+      margin: 7px 0 0 10px;
+    }
+    .change_btn span {
+      display: block;
+      float: left;
+      width: 30px;
+      height: 23px;
+      overflow: hidden;
+      background: url(img/btn_cartoon.gif) no-repeat;
+      text-indent: -9999px;
+      cursor: pointer;
+    }
+    .change_btn .prev {
+      background-position: 0 -400px;
+    }
+    .change_btn .next {
+      background-position: -30px -400px;
+    }
+    .v_caption em {
+      display: inline;
+      float: right;
+      margin: 10px 12px 0 0;
+    }
+    .v_content {
+      position: relative;
+      width: 592px;
+      height: 160px;
+      overflow: hidden;
+      border-right: 1px solid #E7E7E7;
+      border-bottom: 1px solid #E7E7E7;
+      border-left: 1px solid #E7E7E7;
+    }
+    .v_content_list {
+      position: absolute;
+      width: 2500px;
+      top: 0px;
+      left: 0px;
+    }
+    .v_content ul {
+      float: left;
+    }
+    .v_content_list ul li {
+      display: inline;
+      float: left;
+      margin: 10px 2px 0;
+      padding: 8px;
+      /*background: url(img/b5df2063502528.t1.jpg) no-repeat;*/
+    }
+    .v_content ul li a {
+      display: block;
+      width: 128px;
+      height: 80px;
+      overflow: hidden;
+    }
+    .v_content ul li img {
+      width: 128px;
+      height: 96px;
+    }
+    .v_content_list h4 {
+      width: 128px;
+      height: 18px;
+      overflow: hidden;
+    }
+    .v_content ul li h4 a {
+      display: inline !important;
+      height: auto !important;
+    }
+    .v_content ul li span {
+      color: #666;
+    }
+    .v_content ul li em {
+      color: #888;
+      font-family: Verdana;
+      font-size: 0.9em;
+    }
+    /*div#panel {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      border: 1px solid #0050D0;
+      background: #96E555;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .head {
+      padding: 10px 10px;
+      background: #66afe9;
+      border: 1px solid #000;
+    }
+    div#panel .content {
+      display: none;
+      border: 1px solid #000;
+      border-top: 0;
+      padding: 15px 10px;
+      text-indent: 36px;
+      line-height: 1.5em;
+    }
+    .highlight {
+      background: #FF3300;
+    }
+    .over {
+      background: #8a6d3b;
+    }*/
+  </style>
+</head>
+<body>
+    <div class="v_show">
+        <!--头部标题、按钮等-->
+        <div class="v_caption clear">
+            <h2 class="cartoon" title="卡通动漫">卡通动漫</h2>
+            <div class="highlight_tip">
+                <span class="current">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+            </div>
+            <div class="change_btn">
+                <span class="prev">上一页</span>
+                <span class="next">下一页</span>
+            </div>
+            <em><a href="#">更多>></a></em>
+            <!--<div class="clearfix"></div>-->
+        </div>
+        <!--视频内容展示区域 -->
+        <div class="v_content">
+            <div class="v_content_list">
+                <ul>
+                    <li><a href="#"><img src="img/01.jpg" alt="海贼王"></a><h4><a href="#">海贼王</a></h4><span>播放 <em>28276</em></span></li>
+                    <li><a href="#"><img src="img/01.jpg" alt="海贼王"></a><h4><a href="#">海贼王</a></h4><span>播放 <em>28276</em></span></li>
+                    <li><a href="#"><img src="img/01.jpg" alt="海贼王"></a><h4><a href="#">海贼王</a></h4><span>播放 <em>28276</em></span></li>
+                    <li><a href="#"><img src="img/01.jpg" alt="海贼王"></a><h4><a href="#">海贼王</a></h4><span>播放 <em>28276</em></span></li>
+                    <li><a href="#"><img src="img/02.jpg" alt="哆啦A梦"></a><h4><a href="#">哆啦A梦</a></h4><span>播放 <em>42345</em></span></li>
+                    <li><a href="#"><img src="img/02.jpg" alt="哆啦A梦"></a><h4><a href="#">哆啦A梦</a></h4><span>播放 <em>42345</em></span></li>
+                    <li><a href="#"><img src="img/02.jpg" alt="哆啦A梦"></a><h4><a href="#">哆啦A梦</a></h4><span>播放 <em>42345</em></span></li>
+                    <li><a href="#"><img src="img/02.jpg" alt="哆啦A梦"></a><h4><a href="#">哆啦A梦</a></h4><span>播放 <em>42345</em></span></li>
+                    <li><a href="#"><img src="img/03.jpg" alt="火影忍者"></a><h4><a href="#">火影忍者</a></h4><span>播放 <em>38745</em></span></li>
+                    <li><a href="#"><img src="img/03.jpg" alt="火影忍者"></a><h4><a href="#">火影忍者</a></h4><span>播放 <em>38745</em></span></li>
+                    <li><a href="#"><img src="img/03.jpg" alt="火影忍者"></a><h4><a href="#">火影忍者</a></h4><span>播放 <em>38745</em></span></li>
+                    <li><a href="#"><img src="img/03.jpg" alt="火影忍者"></a><h4><a href="#">火影忍者</a></h4><span>播放 <em>38745</em></span></li>
+                    <li><a href="#"><img src="img/04.jpg" alt="龙珠"></a><h4><a href="#">龙珠</a></h4><span>播放 <em>57865</em></span></li>
+                    <li><a href="#"><img src="img/04.jpg" alt="龙珠"></a><h4><a href="#">龙珠</a></h4><span>播放 <em>57865</em></span></li>
+                    <li><a href="#"><img src="img/04.jpg" alt="龙珠"></a><h4><a href="#">龙珠</a></h4><span>播放 <em>57865</em></span></li>
+                    <li><a href="#"><img src="img/04.jpg" alt="龙珠"></a><h4><a href="#">龙珠</a></h4><span>播放 <em>57865</em></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+  <!--<div id="panel">-->
+    <!--<h5 class="head">什么是jQuery？</h5>-->
+    <!--<div class="content">-->
+      <!--jQuery是继Prototype之后又一个优秀的JavaScript库，它是一个由John Resig创建于2006年1月的开源项目。jQuery凭借简洁的语法和跨平台的兼容性，极大地简化了JavaScript开发人员遍历HTML文档、操作DOM、处理事件、执行动画和开发Ajax。它独特而优雅的代码风格改变了JavaScript程序员的设计思路和编写程序的方式。-->
+    <!--</div>-->
+    <!--<input type="text" value="请输入密码" />-->
+    <!--<br />-->
+
+    <!--&lt;!&ndash;<button id="delAll">删除所有事件</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;<button id="delTwo">删除第二个事件</button>&ndash;&gt;-->
+    <!--<div id="test"></div>-->
+  <!--</div>-->
+  <!--<button id="btn">单击我</button>-->
+<script type="text/javascript">
+//  $(function(){
+//      $("#panel h5.head").bind("click", function(){
+//          var $content = $(this).next();
+//          if($content.is(":visible")){
+//              $content.hide();
+//          }else{
+//              $content.show();
+//          }
+//      })
+//  })
+//  $(function(){
+//      $("#panel h5.head").bind("mouseover", function(){
+//          $(this).next().show();
+//      }).bind("mouseout", function(){
+//          $(this).next().hide();
+//      })
+//  })
+//  $(function(){
+//      $("#panel h5.head").mouseover(function(){
+//          $(this).next().show();
+//      }).mouseout(function(){
+//          $(this).next().hide();
+//      })
+//  })
+//  $(function(){
+//      $("#panel h5.head").hover(function(){
+//          $(this).next().show();
+//      },function(){
+//          $(this).next().hide();
+//      })
+//  })
+//  $(function(){
+//      var flag = 1;
+//      $("#panel h5.head").click(function(){
+//        if (flag == 1) {
+//            $(this).next().toggle();
+//            flag = 0;
+//        } else {
+//            $(this).next().toggle();
+//            flag = 1;
+//        }
+//      })
+//  })
+//    $(function(){
+//        $("#panel h5.head").click(function(){
+//            $(this).next().toggle();
+//            if(!$(this).hasClass("highlight")){
+//                $(this).addClass("highlight");
+//            }else{
+//                $(this).removeClass("highlight");
+//            }
+//        })
+//  })
+//  event.preventDefault();
+//  event.stopPropagation();
+//  $("input").focus(function(){
+//      if($(this).val() == this.defaultValue){
+//          $(this).val("");
+//      }
+//  })
+//      .blur(function(){
+//      if($(this).val() == ""){
+//          $(this).val(this.defaultValue);
+//      }
+//  })
+//      .keyup(function(e){
+//      alert(e.which);
+//  })
+//  $(function(){
+//      $("#btn").one("click", myFun1 = function(){
+//          $("#test").append("<p>我的绑定函数1</p>");
+//      }).bind("click", myFun2 = function(){
+//          $("#test").append("<p>我的绑定函数2</p>");
+//      }).one("click", myFun3 = function(){
+//          $("#test").append("<p>我的绑定函数3</p>");
+//      });
+////      $("#btn").trigger("click");
+//      $("#btn").click();
+//  })
+//  $(function() {
+//      $("#delAll").click(function() {
+//          $("#btn").unbind("click");
+//      })
+//  })
+//  $(function(){
+//      $("#delTwo").click(function(){
+//          $("#btn").unbind("click", myFun2);
+//      })
+//  })
+//  $("#btn").bind("myClick", function(event, message1, message2){
+//      $("#test").append("<p>" + message1 + message2 + "</p>");
+//  })
+//  $("#btn").trigger("myClick", ["我的自定义", "事件"]);
+//  $("input").triggerHandler("focus");
+//  $("div").bind("mouseover mouseout", function(){
+//      $(this).toggleClass("over");
+//  })
+//  $(function(){
+//      $("div").bind("click", function(){
+//          $("body").append("<p>click事件</p>");
+//      });
+//      $("div").bind("click.plugin", function(){
+//          $("body").append("<p>click.plugin事件</p>");
+//      });
+////      $("div").bind("dblclick", function(){
+////          $("body").append("<p>dblclick事件</p>");
+////      });
+//      $("button").click(function(){
+//          $("div").triggerHandler("click");
+//      });
+//  })
+//  $(function(){
+//      var flag = 1;
+//      $("#panel h5.head").next().show();
+//      $("#panel h5.head").click(function(){
+//          if(flag == 1) {
+//              $(this).next().fadeOut(3000);
+//              flag = 0;
+//          }else{
+//              $(this).next().fadeIn("fast");
+//              flag = 1;
+//          }
+//      })
+//  })
+//  $(function(){
+//      var flag = 1;
+//      $("#panel h5.head").click(function(){
+//          if(flag == 0){
+//              $(this).next().slideUp();
+//              flag = 1;
+//          }else{
+//              $(this).next().slideDown();
+//              flag = 0;
+//          }
+//      })
+//  })
+//  $(function(){
+//      $("#panel").css("opacity", "0.5");
+//      $("#btn").click(function(){
+//          $("#panel").animate({"left": "500px", "height": "200px", "opacity": "1"}, 3000)
+//              .animate({"top": "500px", "width": "200px"}, 3000, function(){
+//              $(this).css("border", "5px solid blue");
+//          });
+//      });
+//  })
+//  $("#panel").hover(function(){
+//      $(this).stop(false,true).animate({"height": "150px"}, 200).animate({"width": "300px"}, 300);
+//  },function(){
+//      $(this).stop(false,true).animate({"height": "22"}, 200).animate({"width": "60"}, 300);
+//  })
+//  $("#panel h5.head").next().show();
+//  $("div.content").delay(2000)
+//      .animate({"width": "300"}, 200)
+//      .animate({"height": "300"}, 300)
+//      .animate({"opacity": "0.2"}, 2000);
+  var page = 1;
+  var i = 4;                                            //  每版放4个图片
+  $("span.next").click(function(){                      //  绑定click事件
+      var $parent = $(this).parents("div.v_show");      //  根据当前单击的元素获取父元素
+      var $v_show = $parent.find("div.v_content_list"); //  找到视频内容展示区域
+      var $v_content = $parent.find("div.v_content");   //  找到视频内容展示区域的外部div
+
+      var v_width = $v_content.width();                 //  获取区域内容的宽度
+      var len = $v_show.find("li").length;              //  总的视频图片数
+      var page_count = Math.ceil(len/i);
+
+      if(!$v_show.is(":animated")) {
+
+          if (page == page_count) {
+              $v_show.animate({"left": "0px"}, "normal");
+
+              page = 1;
+          } else {
+              $v_show.animate({"left": "-=" + v_width}, "normal");
+
+              page++;
+          }
+      }
+          $parent.find("span").eq((page-1)).addClass("current").siblings().removeClass("current");
+
+  });
+
+
+  $("span.prev").click(function(){
+      var $parent = $(this).parents("div.v_show");
+      var $v_show = $parent.find("div.v_content_list");
+      var $v_content = $parent.find("div.v_content");
+
+      var v_width = $v_content.width();
+      var len = $v_show.find("li").length;
+      var page_count = Math.ceil(len/i);
+
+      if (!$v_show.is(":animated")) {      //判断“视频内容展示区域”是否正在处于动画
+          if (page == 1) {      //已经到第一个版面了,如果再向前，必须跳转到最后一个版面。
+              $v_show.animate({left: '-=' + v_width * (page_count - 1)}, "slow");
+              page = page_count;
+          } else {
+              $v_show.animate({left: '+=' + v_width}, "slow");
+              page--;
+          }
+      }
+
+      $parent.find("span").eq((page-1)).addClass("current").siblings().removeClass("current");
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

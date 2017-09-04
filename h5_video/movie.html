@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Video</title>
+    <link rel="stylesheet" href="styles/player.css">
+</head>
+<body>
+
+<div class="video-wrapper">
+    <video id="movie" controls>
+        <source src="video/trailer.mp4" />
+        <source src="video/trailer.webm"
+          type="video/webm; codecs='vp8, vorbis'" />
+        <source src="video/trailer.ogv"
+          type="video/ogg; codecs='theora, vorbis'" />
+        <p>Download movie as
+            <a href="movie.mp4">MP4</a>,
+            <a href="movie.webm">WebM</a>,
+            or <a href="movie.ogv">Ogg</a>.
+        </p>
+    </video>
+</div>
+
+<script src="scripts/player.js"></script>
+</body>
+</html>

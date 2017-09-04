@@ -1,0 +1,19 @@
+$red: #FF3300;
+
+.logo {
+  color: $red;
+  font-size: 24px;
+}
+
+ul.list {
+  list-style: square;
+  margin-top: 30px;
+  padding-left: 35px;
+  li {
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    border-bottom: 1px solid #ccc;
+  }
+}
+

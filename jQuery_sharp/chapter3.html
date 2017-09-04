@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Template</title>
+  <script src="scripts/jquery-3.2.1.js"></script>
+  <style>
+    /*.high {
+      font-weight: bold;
+      color: red;
+    }
+    .another {
+      font-style: italic;
+      color: blue;
+    }*/
+    /*input {
+      margin-bottom: 5px;
+    }
+    input[type="button"] {
+      font-size: 12px;
+    }*/
+    body {
+      position: relative;
+    }
+    li {
+      display: inline;
+      /*padding-right: 20px;*/
+      list-style: none;
+    }
+    img {
+      border: 1px solid #000;
+    }
+
+  </style>
+</head>
+<body>
+  <!--<p class="myClass" title="选择你最喜欢的水果.">你最喜欢的水果是？</p>-->
+  <!--<ul>-->
+    <!--<li title="苹果">苹果</li>-->
+    <!--<li title="橘子">橘子</li>-->
+    <!--<li title="菠萝">菠萝</li>-->
+  <!--</ul>-->
+  <!--<input class="placeholder" type="text" id="address" value="请输入邮箱地址" />-->
+  <!--<br />-->
+  <!--<input class="placeholder" type="text" id="password" value="请输入邮箱密码" />-->
+  <!--<input type="button" value="登录" />-->
+  <!--<select id="single">-->
+    <!--<option>选择1号</option>-->
+    <!--<option>选择2号</option>-->
+    <!--<option>选择3号</option>-->
+  <!--</select>-->
+  <!--<select id="multiple" multiple="multiple" style="height: 120px;">-->
+    <!--<option selected="selected">选择1号</option>-->
+    <!--<option>选择2号</option>-->
+    <!--<option>选择3号</option>-->
+    <!--<option>选择4号</option>-->
+    <!--<option selected="selected">选择5号</option>-->
+  <!--</select>-->
+  <!--<input type="checkbox" value="check1" /> 多选 1-->
+  <!--<input type="checkbox" value="check2" /> 多选 2-->
+  <!--<input type="checkbox" value="check3" /> 多选 3-->
+  <!--<input type="checkbox" value="check4" /> 多选 4-->
+  <!--<input type="radio" value="radio1" /> 单选 1-->
+  <!--<input type="radio" value="radio2" /> 单选 2-->
+  <!--<input type="radio" value="radio3" /> 单选 3-->
+
+  <ul>
+    <li><a href="img/apple_1_bigger.jpg" class="tooltip" title="苹果 iPod"><img src="img/apple_1.jpg" alt="苹果 iPod"></a></li>
+    <li><a href="img/apple_2_bigger.jpg" class="tooltip" title="苹果 iPod nano"><img src="img/apple_2.jpg" alt="苹果 iPod nano"></a></li>
+    <li><a href="img/apple_3_bigger.jpg" class="tooltip" title="苹果 iPhone"><img src="img/apple_3.jpg" alt="苹果 iPhone"></a></li>
+    <li><a href="img/apple_4_bigger.jpg" class="tooltip" title="苹果 Mac"><img src="img/apple_4.jpg" alt="苹果 Mac"></a></li>
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+//  var $li = $("ul li:eq(1)");
+//  var li_text = $li.text();
+//  alert(li_text);
+//  var $para = $("p")
+//  var para_text = $para.attr("title");
+//  alert(para_text);
+//  $li_1 = $("<li title='香蕉'>香蕉</li>");
+//  $li_2 = $("<li title='雪梨'>雪梨</li>");
+//  $("ul").append($li_1).append($li_2);
+//  $li_1 = $("<li title='香蕉'>香蕉</li>");
+//  $li_2 = $("<li tilte='雪梨'>雪梨</li>")
+//  $li_3 = $("<li title='其他'>其他</li>")
+//  var $ul = $("ul");
+//  var $two_li = $("ul li:eq(1)");
+//  $("ul").append($li_1).append($li_2);
+////  $ul.prepend($li_2);
+//  $li_3.insertAfter($two_li);
+//  var $one_li = $('ul li:eq(1)');
+//  var $two_li = $('ul li:eq(2)');
+//  $two_li.insertBefore($one_li);
+//  $("ul li:eq(1)").remove();
+//  var $li = $("ul li:eq(1)").remove();
+//  $li.appendTo("ul");
+//  $("ul li:eq(1)").appendTo("ul");
+//  $("ul li").remove("li[title!=菠萝]");
+//  $("ul li").click(function(){
+//      alert($(this).html());
+//  })
+//  var $li = $("ul li:eq(1)").remove();
+//  $li.appendTo("ul");
+//  var $li = $("ul li:eq(1)").detach();
+//  $li.appendTo("ul");
+//  $("ul li:eq(1)").empty();
+//  $("ul li").click(function(){
+//      $(this).clone(true).appendTo("ul");
+//  })
+//  $("p").replaceWith("<strong>你最不喜欢的水果是？</strong>");
+//  $("<strong>你最不喜欢的水果是？</strong>").replaceAll("p");
+//  $("<em>YYJ</em>").insertAfter("strong");
+//  $("strong").clone().insertBefore("ul");
+//  $("strong").wrap("<b></b>");
+//  $("strong").wrapAll("<b></b>");
+//  $("strong").wrapInner("<b></b>");
+//  $("p").attr({"title": "hello", "name": "yyj"});
+//  $("p").removeAttr("title");
+//  $("p").attr("class", "high");
+//  $button_1 = $("<button id='btn1'>追加class类</button>")
+//  $button_2 = $("<button id='btn2'>移除high类</button>")
+//  $button_3 = $("<button id='btn3'>移除全部类</button>")
+//  $button_4 = $("<button id='btn4'>重复切换类</button>")
+//  $button_1.prependTo("body");
+//  $button_2.prependTo("body");
+//  $button_3.prependTo("body");
+//  $button_4.prependTo("body");
+//  $("button").wrapAll("<div></div>").css("margin-right", "10px");
+//  $("#btn1").click(function(){
+//      $('p').addClass("another");
+//  });
+//  $("#btn2").click(function(){
+//      $('p').removeClass("high");
+//  });
+//  $("#btn3").click(function(){
+//      $('p').removeClass();
+//  });
+//  $("#btn4").click(function(){
+//      $('p').toggleClass("another");
+//  });
+//  $("button").click(function(){
+//      if($('p').hasClass("another")) {
+//          alert("p has another Class!");
+//      }else {
+//          alert("p loses anther Class!");
+//      }
+//  });
+//  $('p').wrapInner("<strong></strong>");
+//  var p_html = $("p").html();
+//  alert(p_html);
+//  $("p").html("<strong>你最喜欢的水果是？</strong>");
+//  $("p").text("你最喜欢的水果是？");
+//  $("#address").focus(function(){
+//      var txt_value = $(this).val();
+//      if(txt_value == this.defaultValue){
+//          $(this).val("");
+//      }
+//  });
+//  $("#address").blur(function(){
+//      var txt_value = $(this).val();
+//      if(txt_value == ""){
+//          $(this).val(this.defaultValue);
+//      }
+//  });
+//  $("#password").focus(function(){
+//      var txt_value = $(this).val();
+//      if(txt_value == this.defaultValue){
+//          $(this).val("");
+//      }
+//  });
+//  $("#password").blur(function(){
+//      var txt_value = $(this).val();
+//      if(txt_value == ""){
+//          $(this).val(this.defaultValue);
+//      }
+//  });
+//  $("#single").val("选择2号");
+//  $("#single option:eq(1)").attr("selected", "true");
+//  $("#multiple").val(["选择2号", "选择3号"]);
+//  $(":checkbox").val(["check2", "check3"]);
+//  $(":radio").val(["radio2"]);
+//  $("[value=radio2]:radio").attr("checked", "true");
+//  var $body = $("body").children();
+//  var $p = $("p").children();
+//  var $ul = $("ul").children();
+//  alert($body.length);
+//  alert($p.length);
+//  alert($ul.length);
+//  for(var i=0, len=$ul.length; i<len; i++) {
+//      alert($ul[i].innerHTML);
+//  }
+//  var $p1 = $("p").next();
+//  $p1.attr("class", "high");
+//  var $ul = $("ul").prev();
+//  $ul.attr("class", "another");
+//  var $p2 = $("p").siblings();
+//  $p2.attr("class", "another");
+//  $(document).bind("click", function(e) {
+//      $(e.target).closest("li").toggleClass("high");
+//  })
+//  var $p1 = $("p").css("height");
+//  alert($p1);
+//  var $p2 = $("p").height();
+//  alert($p2);
+//  var offset = $("P").offset();
+//  var left = offset.left;
+//  var top = offset.top;
+//  alert(left);
+//  alert(top);
+//  var $p = $("p");
+//  var scrollTop = $p.scrollTop();
+//  var scrollLeft = $p.scrollLeft();
+//  alert(scrollTop);
+//  alert(scrollLeft);
+$(function(){
+    var x = 10;
+    var y = 20;
+    $("a.tooltip").mouseover(function(e){
+        this.myTitle = this.title;
+        this.title = "";
+        var imgTitle = this.myTitle? "<br/>" + this.myTitle : "";
+        var tooltip = "<div id='tooltip'><img src='"+this.href+"' alt='产品预览图' />" + imgTitle + "</div>";
+        $("body").append(tooltip);
+        $("#tooltip").css({
+            "position": "absolute",
+            "color": "#fff",
+            "background": "#000",
+            "top": (e.pageY+y) + "px",
+            "left": (e.pageX+x) + "px"
+        }).show("fast");
+
+    }).mouseout(function(){
+        this.title = this.myTitle;
+        $("#tooltip").remove();
+    }).mousemove(function(e){
+        $("#tooltip").css({
+            "top": (e.pageY+y) + "px",
+            "left": (e.pageX+x) + "px"
+        })
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

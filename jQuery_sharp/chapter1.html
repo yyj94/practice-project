@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Template</title>
+  <script src="scripts/jquery-3.2.1.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      width: 150px;
+      height: auto;
+      border: 1px solid #31b0d5;
+      float: left;
+      background: #fff;
+    }
+    ul {
+    }
+    li {
+      list-style: none;
+    }
+    a {
+      display: block;
+      padding: 10px 20px;
+      font-size: 10px;
+      text-decoration: none;
+    }
+    a:link, a:visited {
+      color: #0f0f0f;
+    }
+    a:hover, a:active, li.level1>a:hover, li.level1>a:active {
+      cursor: pointer;
+      color: #0e83dc;
+    }
+    li.level1 {
+      border-bottom: 1px solid #31b0d5;
+    }
+    li.level1>a {
+      color: #bbaa99;
+      font-weight: bold;
+      background: #d0e9c6;
+    }
+    li.level1>a.current {
+      background: #2b542c;
+    }
+    li.level1>a.current:hover, li.level1>a.current:active {
+      cursor: default;
+      color: #bbaa99;
+    }
+    li.level1:last-child {
+      border-bottom: 0;
+    }
+    ul.level2 li a {
+      padding-left: 25px;
+    }
+
+
+  </style>
+</head>
+<body>
+<!--<div class="box">
+  <ul class="menu">
+    <li class="level1">
+      <a class="current" herf="#none">衬衫</a>
+      <ul class="level2">
+        <li><a href="#none">短袖衬衫</a></li>
+        <li><a href="#none">长袖衬衫</a></li>
+        <li><a href="#none">短袖T恤</a></li>
+        <li><a href="#none">长袖T恤</a></li>
+      </ul>
+    </li>
+    <li class="level1">
+      <a href="#none">卫衣</a>
+      <ul class="level2">
+        <li><a href="#none">开襟卫衣</a></li>
+        <li><a href="#none">套头卫衣</a></li>
+        <li><a href="#none">运动卫衣</a></li>
+        <li><a href="#none">童装卫衣</a></li>
+      </ul>
+    </li>
+    <li class="level1">
+      <a href="#none">裤子</a>
+      <ul class="level2">
+        <li><a href="#none">短裤</a></li>
+        <li><a href="#none">休闲裤</a></li>
+        <li><a href="#none">牛仔裤</a></li>
+        <li><a href="#none">免烫卡其裤</a></li>
+      </ul>
+    </li>
+  </ul>
+
+</div>-->
+<input type="checkbox" id="cr" /><label for="cr">我已经阅读了上面的制度。</label>
+<script type="text/javascript">
+    /*$(".current").parent().siblings().children("a")
+        .next().hide();
+    $(".level1 > a").click(function(){
+        $(this).addClass("current")     //  给当前元素添加"current"样式
+        .next().show()              //  下一个元素显示
+        .parent().siblings().children("a").removeClass("current")   //  父元素的同辈元素的子元素<a>移除"current"样式
+        .next().hide();             //  它们的下一个元素隐藏
+        return false;
+    });*/
+
+    //  将jQuery对象转换为DOM对象，用DOM方法判断
+    /*$(document).ready(function(){
+     var $cr = $("#cr");
+     var cr = $cr[0];
+     $cr.click(function(){
+     if(cr.checked){
+     alert("感谢你的支持！你可以继续操作！");
+     }
+     })
+     });*/
+
+    //  直接用jQuery方法判断
+    $(function(){
+        var $cr = $("#cr");
+        $cr.click(function(){
+            if($cr.is(":checked")){
+                alert("感谢你的支持！你可以继续操作！");
+            }
+        })
+    });
+</script>
+</body>
+</html>

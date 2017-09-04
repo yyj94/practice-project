@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Template</title>
+  <script src="scripts/jquery-3.2.1.js"></script>
+  <style>
+    /*div, span, p {
+      width: 140px;
+      height: 140px;
+      margin: 5px;
+      background: #aaa;
+      border: #000 1px solid;
+      float: left;
+      font-size: 17px;
+      font-family: Verdana;
+    }
+    div.mini {
+      width: 55px;
+      height: 55px;
+      background-color: #aaa;
+      font-size: 12px;
+    }
+    div.hide {
+      display: none;
+    }*/
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #31b0d5;
+      font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+    }
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:link, a:visited {
+      color: #000000;
+    }
+    a:hover, a:active {
+      color: #333344;
+    }
+    .SubCategoryBox {
+      margin: 0 auto;
+      width: 760px;
+      border: 1px solid #000000;
+    }
+    .SubCategoryBox ul {
+      margin-top: 5px;
+      margin-left: 20px;
+    }
+    .SubCategoryBox li {
+      display: inline-block;
+      padding-bottom: 10px;
+      width: 240px;
+    }
+    .showmore {
+      margin-bottom: 10px;
+    }
+    .showmore a {
+      display: block;
+      margin: 0 auto;
+      width: 120px;
+      height: 24px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: bold;
+    }
+    .showmore a:link, .showmore a:visited {
+      color: #c7254e;
+      background: #ccc;
+    }
+    .showmore a:hover, .showmore a:active {
+      color: #000000;
+      background: #d0e9c6;
+    }
+    .showmore a span {
+      padding-left: 20px;
+      background: url('img/down.png') no-repeat 0 0;
+    }
+    .promoted a{
+      color: #d0e9c6;
+    }
+  </style>
+</head>
+<body>
+<!--<p class="demo">jQuery Demo</p>-->
+
+<!--<div class="one" id="one">-->
+  <!--id为one,class为one的div-->
+  <!--<div class="mini">class为mini</div>-->
+<!--</div>-->
+<!--<div class="one" id="two" title="test">-->
+  <!--id为two，class为one,title为test的div.-->
+  <!--<div class="mini" title="other">class为mini,title为other</div>-->
+  <!--<div class="mini" title="test">class为mini,title为test</div>-->
+<!--</div>-->
+<!--<div class="one">-->
+  <!--<div class="mini">class为mini</div>-->
+  <!--<div class="mini">class为mini</div>-->
+  <!--<div class="mini">class为mini</div>-->
+  <!--<div class="mini"></div>-->
+<!--</div>-->
+<!--<div>-->
+  <!--<div class="mini">class为mini</div>-->
+  <!--<div class="mini">class为mini</div>-->
+  <!--<div class="mini">class为mini</div>-->
+  <!--<div class="mini" title="tesst">class为mini,title为tesst</div>-->
+<!--</div>-->
+<!--<div style="display: none;" class="none">-->
+  <!--style的display为"none"的div-->
+<!--</div>-->
+<!--<div class="hide">class为"hide"的div</div>-->
+<!--<div>-->
+  <!--包含input的type为"hidden"的div<input type="hidden" size="8" />-->
+<!--</div>-->
+<!--<span id="mover">正在执行动画的span元素.</span>-->
+<!--<div title="en">title为en的div元素</div>-->
+<!--<div title="en-UK">title为en-UK的div元素</div>-->
+<!--<div title="english">title为english的div元素</div>-->
+<!--<div title="en uk">title为en uk的div元素</div>-->
+<!--<div title="uken">title为uken的div元素</div>-->
+<!--<form id="form1" action="#">-->
+  <!--可用元素: <input name="add" value="可用文本框" /> <br/>-->
+  <!--不可用元素: <input name="email" disabled="disabled" value="不可用文本框"> <br>-->
+  <!--可用元素: <input name="che" value="可用文本框"> <br>-->
+  <!--不可用元素: <input name="name" disabled="disabled" value="不可用文本框"> <br>-->
+  <!--<br>-->
+  <!--多选框: <br>-->
+  <!--<input type="checkbox" name="newsletter" checked="checked" value="test1">test1-->
+  <!--<input type="checkbox" name="newsletter" value="test2">test2-->
+  <!--<input type="checkbox" name="newsletter" value="test3">test3-->
+  <!--<input type="checkbox" name="newsletter" checked="checked" value="test4">test4-->
+  <!--<input type="checkbox" name="newsletter" value="test5">test5-->
+  <!--<div></div>-->
+  <!--<br><br>-->
+  <!--下拉列表1: <br>-->
+  <!--<select name="test" multiple="multiple" style="height: 100px;">-->
+    <!--<option>浙江</option>-->
+    <!--<option selected="selected">湖南</option>-->
+    <!--<option>北京</option>-->
+    <!--<option selected="selected">天津</option>-->
+    <!--<option>广州</option>-->
+    <!--<option>湖北</option>-->
+  <!--</select>-->
+  <!--<br><br>-->
+  <!--下拉列表2: <br>-->
+  <!--<select name="test2">-->
+    <!--<option>浙江</option>-->
+    <!--<option>湖南</option>-->
+    <!--<option selected="selected">北京</option>-->
+    <!--<option>天津</option>-->
+    <!--<option>广州</option>-->
+    <!--<option>湖北</option>-->
+  <!--</select>-->
+  <!--<div></div>-->
+<!--</form>-->
+<!--<form action="#" id="form1">-->
+  <!--<input type="button" value="Button" /><br>-->
+  <!--<input type="checkbox" name="c" />1-->
+  <!--<input type="checkbox" name="c" />2-->
+  <!--<input type="checkbox" name="c" />3<br>-->
+  <!--<input type="file" /><br>-->
+  <!--<input type="hidden" /><div style="display: none;">test</div><br>-->
+  <!--<input type="image" /><br>-->
+  <!--<input type="password" /><br>-->
+  <!--<input type="radio" name="a" />1<input type="radio" name="a" />2<br>-->
+  <!--<input type="reset" /><br>-->
+  <!--<input type="submit" value="提交" /><br>-->
+  <!--<input type="text" /><br>-->
+  <!--<select><option>Option</option></select><br>-->
+  <!--<textarea></textarea><br>-->
+  <!--<button>Button</button><br>-->
+<!--</form>-->
+
+<div class="SubCategoryBox">
+  <ul>
+    <li><a href="#">佳能</a><i>(30440)</i></li>
+    <li><a href="#">索尼</a><i>(27220)</i></li>
+    <li><a href="#">三星</a><i>(20808)</i></li>
+    <li><a href="#">尼康</a><i>(17821)</i></li>
+    <li><a href="#">松下</a><i>(12289)</i></li>
+    <li><a href="#">卡西欧</a><i>(8242)</i></li>
+    <li><a href="#">富士</a><i>(14894)</i></li>
+    <li><a href="#">柯达</a><i>(9520)</i></li>
+    <li><a href="#">宾得</a><i>(2195)</i></li>
+    <li><a href="#">理光</a><i>(4114)</i></li>
+    <li><a href="#">奥林巴斯</a><i>(12205)</i></li>
+    <li><a href="#">明基</a><i>(1466)</i></li>
+    <li><a href="#">爱国者</a><i>(3091)</i></li>
+    <li><a href="#">其他品牌相机</a><i>(7275)</i></li>
+  </ul>
+  <div class="showmore">
+    <a href="more.html"><span>显示全部品牌</span></a>
+  </div>
+</div>
+
+<script type="text/javascript">
+//    $(".demo").click(function(){
+//        alert("jQuery Demo");
+//    });
+
+//  基本选择器
+//  $("#one").css("background", "#bbffaa");
+//  $(".mini").css("background", "#bbffaa");
+//  $("div").css("background", "#bbffaa");
+//  $("*").css("background", "#bbffaa");
+//  $("span, #two").css("background", "#bbffaa");
+//  层次选择器
+//  $("body div").css("background", "#bbffaa");
+//  $("body>div").css("background", "#bbffaa");
+//  $(".one+div").css("background", "#bbffaa");
+//  $("#two~div").css("background", "#bbffaa");
+//  $("#two").nextAll("div").css("background", "#bbffaa");
+//  $("#two").siblings("div").css("background", "#bbffaa");
+/*  过滤选择器
+    基本过滤选择器*/
+//  $("div:first").css("background", "#bbffaa");
+//  $("div:last").css("background", "#bbffaa");
+//  $("div:not(.one)").css("background", "#bbffaa");
+//  $("div:even").css("background", "#bbffaa");
+//  $("div:odd").css("background", "#bbffaa");
+//  $("div:eq(3)").css("background", "#bbffaa");
+//  $("div:gt(3)").css("background", "#bbffaa");
+//  $("div:lt(3)").css("background", "#bbffaa");
+//  $(":header").css("background", "#bbffaa");
+//  $(":animated").css("background", "#bbffaa");
+//  $(":focus").css("background", "#bbffaa");
+//  内容过滤选择器
+//  $("div:contains('di')").css("background", "#bbffaa");
+//  $("div:empty").css("background", "#bbffaa");
+//  $("div:has(.mini)").css("background", "#bbffaa");
+//  $("div:parent").css("background", "#bbffaa");
+//  可见性过滤选择器
+//  $("div:visible").css("background", "#bbffaa");
+//  $("div:hidden").show(3000);
+//  属性过滤选择器
+//  $("div[title]").css("background", "#bbffaa");
+//  $("div[title='test']").css("background", "#bbffaa");
+//  $("div[title!=test]").css("background", "#bbffaa");
+//  $("div[title^=te]").css("background", "#bbffaa");
+//  $("div[title$=est]").css("background", "#bbffaa");
+//  $("div[title*=es]").css("background", "#bbffaa");
+//  $("div[id][title*=es]").css("background", "#bbffaa");
+//  $("div[title^=en]").css("background", "#bbffaa");
+//  $("div[title*=en]").css("background", "#bbffaa");
+//  $("div[title|=en]").css("background", "#bbffaa");
+//  $("div[title~=uk]").css("background", "#bbffaa");
+//  子元素过滤选择器
+//  $("div.one :nth-child(2)").css("background", "#bbffaa");
+//  $("div.one :first-child").css("background", "#bbffaa");
+//  $("div.one :last-child").css("background", "#bbffaa");
+//  $("div.one :only-child").css("background", "#bbffaa");
+//  表单对象属性过滤选择器
+//  $("#form1 input:enabled").val("这里变化了！");
+//  $("#form1 input:disabled").val("这里变化了！");
+//  var method1 = function(){
+//    var i = $("input:checked").length;
+//    $("div:eq(0)").text("有"+i+"个被选中");
+//  };
+//  $(function(){method();});
+//  $("input[type=checkbox]").click(method);
+//  var method2 = function() {
+//    var $a = $("select :selected")
+//    .each(function(){
+//      $(this).text(this.text + " ");
+//    }).text();
+//    $("div:eq(1)").text("你选中的时： " + $a);
+//  }
+//  $(document).ready(method2());
+//  $("select option").click(method2);
+//  表单选择器
+//  var method3 = function() {
+//      var i1 = $("#form1 :input").length;
+//      var i2 = $("#form1 :text").length;
+//      var i3 = $("#form1 :password").length;
+//      var i4 = $("#form1 :radio").length;
+//      var i5 = $("#form1 :checkbox").length;
+//      var i6 = $("#form1 :submit").length;
+//      var i7 = $("#form1 :image").length;
+//      var i8 = $("#form1 :reset").length;
+//      var i9 = $("#form1 :button").length;
+//      var ii1 = $("#form1 :file").length;
+//      var ii2 = $("#form1 :hidden").length;
+//      $("body").append("所有表单元素的个数总共有: " + i1+                    "    所有单行文本框的个数: " + i2
+//          + "    所有密码框的个数: " + i3
+//          + "    所有单选框的个数: " + i4
+//          + "    所有多选的个数: " + i5
+//          + "    所有提交按钮的个数: " + i6
+//          + "    所有图像按钮的个数: " + i7
+//          + "    所有重置按钮的个数: " + i8
+//          + "    所有button按钮的个数: " + i9
+//          + "    所有上传域的个数: " + ii1
+//          + "    所有不可见元素的个数: " + ii2);
+//  }
+//  $(document).ready(method3);
+
+  var $category = $("ul li:gt(5):not(:last)");
+  $category.hide();
+  var $toggleBtn = $(".showmore>a");
+  $toggleBtn.click(function(){
+    if($category.is(":visible")){
+      $category.hide();
+      $(this).find("span")
+          .css("background", "url('img/down.png') no-repeat 0 0")
+          .text("显示全部品牌");
+      $("ul li").filter(":contains('佳能'), :contains('尼康'), :contains('奥林巴斯')")
+          .removeClass('promoted');
+    }else{
+      $category.show();
+      $(this).find("span")
+          .css("background", "url('img/up.png') no-repeat 0 0")
+          .text("精简显示品牌");
+      $("ul li").filter(":contains('佳能'), :contains('尼康'), :contains('奥林巴斯')")
+          .addClass("promoted");
+    }
+    return false;
+  });
+
+//var $category = $("ul li:gt(5):not(:last)");
+//$category.hide();
+//var $toggleBtn = $(".shomore a");
+//$toggleBtn.toggle(function(){
+//    $category.hide();
+//    $(this).find("span")
+//        .css("background", "url('img/down.png') no-repeat 0 0")
+//        .text("显示全部品牌");
+//    $("ul li").filter(":contains('佳能'), :contains('尼康'), :contains('奥林巴斯')")
+//        .removeClass("promoted");
+//    return false;
+//}, function(){
+//    $category.show();
+//    $(this).find("span")
+//        .css("background", "url('img/up.png') no-repeat 0 0")
+//        .text("精简显示品牌");
+//    $("ul li").filter(":contains('佳能'), :contains('尼康'), :contains('奥林巴斯')")
+//        .addClass("promoted");
+//    return false;
+//});
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
